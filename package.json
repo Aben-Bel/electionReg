@@ -1,0 +1,22 @@
+{
+  "name": "electionreg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aben-Bel/electionReg.git"
+  },
+  "author": "",
+  "license": "MIT ",
+  "bugs": {
+    "url": "https://github.com/Aben-Bel/electionReg/issues"
+  },
+  "homepage": "https://github.com/Aben-Bel/electionReg#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
