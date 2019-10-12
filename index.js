@@ -1,5 +1,9 @@
-const express = require('express')
+const express = require('express');
 const app = express();
+const mongoose = require('mongoose');
+
+const db = mongoose.connect('mongodb://localhost/electionReg', { useNewUrlParser: true });
+const data = require('./models/electionReg');
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
