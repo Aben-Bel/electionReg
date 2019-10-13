@@ -16,8 +16,6 @@ db();
 // configure app.use()
 app.use(bodyParserJSON);
 app.use(bodyParserURLEncoded);
-
-
 app.use('/api',router);
 
 app.get('/', (req, res) => {
