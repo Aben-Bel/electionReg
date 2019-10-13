@@ -1,8 +1,23 @@
 <html>
     <head>
         <title>Finger Print Tryout</title>
+        <script></script>
     </head>
     <body>
-
+        <h1>HELLO</h1>
+        <button id="submit">Click</button>
+        <script>
+            window.post = function(url, data) {
+                return fetch(url, {method: "POST",headers: {
+                    'Content-Type': 'application/json'
+                }, body: JSON.stringify(data)});
+            }
+            const btn = document.querySelector('#submit');
+            btn.addEventListener('click',(evt)=>{
+                const data = {name: "osmium", description: "bluh bluh"};
+                console.log('data: ', data);
+                post("/api/create", {name: "osmium", description: "bluh bluh"});
+            });
+        </script>
     </body>
 </html>
