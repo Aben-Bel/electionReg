@@ -1,0 +1,118 @@
+
+h1{
+  font-family: Calibri; 
+  font-size: 35pt;         
+  font-style: normal; 
+  font-weight: bold; 
+  color:Black;
+  text-align: center; 
+  
+}
+.padded5{
+	padding-left: 5vh;
+	padding-top:2vh;
+}
+.padded6{
+	padding-top:2vh;
+	padding-bottom:2vh;
+}
+.padded7{
+	padding-bottom:2vh;
+}
+.padded{
+	padding-left: 5vh;
+	padding-bottom:2vh;
+}
+.padded2{
+	padding-right:2vh;
+	padding-top:2vh;
+	padding-bottom:2vh;
+}
+
+.padded3{
+	padding-left:5vh;
+	padding-top:2vh;
+
+}
+.padded4{
+	padding-left:5vh;
+	padding-top:2vh;
+	padding-bottom:2vh;
+
+}
+
+.one{
+ 
+ font-family: Calibri; 
+ color:black; 
+ font-size: 11pt; 
+ font-style: normal;
+ font-weight: bold;
+ text-align:; 
+ background-color: #D3D3D3; 
+ -moz-box-shadow: 0 0 5px 5px #888;
+-webkit-box-shadow: 0 0 5px 5px#888;
+box-shadow: 0 0 5px 5px #888;
+}
+.two{
+background-color: #333333;
+-moz-box-shadow: 0 0 5px 5px #888;
+-webkit-box-shadow: 0 0 5px 5px #888;
+box-shadow: 0 0 5px 5px #888;
+
+
+}
+input.text{
+  color: black; 
+  font-family: Verdana;  
+  font-size: 12px;
+  background-color:white;
+}
+table.inner{
+  border: 0px
+}
+input.button{
+  color: #FFFFFF; 
+  font-family: Verdana; 
+  font-weight: bold; 
+  font-size: 12px;
+  background-color: black;
+  color: #dfc15e; 
+  font-size:15px;
+}
+td.text{
+    font-family: Verdana; 
+  font-weight: bold; 
+  background-color: black;
+  color: #dfc15e; 
+  font-size:15px;
+}
+body{
+  background-color:white;
+}
+#header{
+	font-family: Verdana; 
+  font-weight: bold; 
+  background-color: #333333;
+  color: #dfc15e; 
+  font-size:15px;
+}
+#text{
+	font-family: Calibri; 
+  color: black; 
+  font-size:18px;
+}
+.info{
+	font-family: Calibri; 
+	color: black; 
+    font-size:18px;
+}
+.container{
+	text-align: center;
+}
+.container2{
+	background-color: #eeeeee;
+  width: 900px;
+  height: 1700px;
+  display: inline-block;
+}
