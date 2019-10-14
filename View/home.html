@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <div class="choice">
+            <button id="register">Register</button>
+            <button id="check">Check Status</button>
+        </div>
+        <script>
+            const register = document.querySelector('#register');
+            const check = document.querySelector('#check');
+
+            register.addEventListener('click',()=>{
+                location.href = location.href + 'nav/Registration.html';
+            });
+            check.addEventListener('click',()=>{
+                location.href = location.href + 'nav/status.html';
+            });
+        </script>
+    </body>
+</html>
+

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 module.exports = () => {
-    mongoose.connect('mongodb://localhost:27017/electionReg');
+    mongoose.connect('mongodb://localhost:27017/registration');
 
     mongoose.connection.on('connected', function(){
         console.log("Mongoose default connection is open to ", 'mongodb://localhost:27017/electionReg');

@@ -105,14 +105,21 @@ body{
 .info{
 	font-family: Calibri; 
 	color: black; 
-    font-size:18px;
+  font-size:18px;
 }
 .container{
 	text-align: center;
 }
 .container2{
 	background-color: #eeeeee;
-  width: 900px;
-  height: 1700px;
+  height: 2700px;
   display: inline-block;
+}
+#buttons{
+  margin-top:10px;
+  background-color: #D3D3D3; 
+  -moz-box-shadow: 0 0 5px 5px #888;
+ -webkit-box-shadow: 0 0 5px 5px#888;
+ box-shadow: 0 0 5px 5px #888;
+ background-origin: shadow top 0;;
 }

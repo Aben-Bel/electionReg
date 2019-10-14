@@ -1,23 +1,33 @@
-var registers = require('./curd');
+const registers = require('./curd');
+const shortid = require('shortid');
+const path = require('path');
+const express = require('express');
+const router = express.Router();
 
 exports.createregister = function (req, res, next) {
     console.log('GOT MESSAGE FROM CREATE');
-    console.log(`MESSAGE: ${req.body}`);
-    var register = {
-        name: req.body.name,
-        description: req.body.description
+    const data = req.body;
+    console.log('Message: ', data);
+    const id = shortid.generate();
+    const register = {
+        firstName:data.firstName,
+        fatherName:data.fatherName,
+        grandFatherName:data.grandFatherName,
+        gender:data.gender,
+        dateOfBirth: data.dateOfBirth,
+        maritalStatus: data.martialStatus,
+        mobileNumber:data.mobileNumber,
+        emailAddress:data.emailAddress,
+        regionCity: data.regionCity,
+        subcity:data.subCity,
+        wereda:data.wereda,
+        idNumber:data.idNumber,
+        verifyNumber:id,
+        status:'awaiting'
     };
 
-    registers.create(register, function(err, register) {
-        if(err) {
-            res.json({
-                error : err
-            })
-        }
-        res.json({
-            message : "register created successfully"
-        })
-    })
+    registers.create(register)
+    res.send(id);
 }
 
 exports.getregisters = function(req, res, next) {
@@ -34,44 +44,41 @@ exports.getregisters = function(req, res, next) {
 }
 
 exports.getregister = function(req, res, next) {
-    registers.get({name: req.params.name}, function(err, elector) {
-        if(err) {
+    console.log('querying for: ', req.params.name);
+    if (req.params.name === 'awaiting'){
+        registers.get({status: req.params.name}, function(err, elector) {
+            if(err) {
+                res.json({
+                    error: err
+                })
+            }
             res.json({
-                error: err
+                elector: elector
             })
-        }
-        res.json({
-            elector: elector
         })
-    })
+    } else {
+        registers.get({verifyNumber: req.params.name}, function(err, elector) {
+            if(err) {
+                res.json({
+                    error: err
+                })
+            }
+            res.json({
+                elector: elector
+            })
+        })
+    }
+    
 }
 
 exports.updateregister = function(req, res, next) {
-    var register = {
-        name: req.body.name,
-        description: req.body.description
-    }
-    registers.update({_id: req.params.id}, register, function(err, register) {
-        if(err) {
-            res.json({
-                error : err
-            })
-        }
-        res.json({
-            message : "register updated successfully"
-        })
-    })
+    let register = req.body;
+    console.log('updated ');
+    registers.update({_id: req.params.id}, register)
 }
 
 exports.removeregister = function(req, res, next) {
-    registers.delete({_id: req.params.id}, function(err, register) {
-        if(err) {
-            res.json({
-                error : err
-            })
-        }
-        res.json({
-            message : "register deleted successfully"
-        })
-    })
+    console.log('about to delete')
+    registers.delete({_id: req.params.id});
+    res.send('deleted');
 }

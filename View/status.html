@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div>
+            <div class="card">
+                <h1>Enter ID</h1>
+                <input type="text" placeholder="ID" id="id"/> <br/>
+                <input type="button" value="Countinue" id="continue"/>
+            </div>
+        </div>
+        <script>
+            const id = document.querySelector('#id');
+            const check = document.querySelector('#continue');
+
+            check.addEventListener('click',()=>{
+                const idValue = id.value;
+
+                fetch(`/api/get/${idValue}`).then((res) => {
+                    return res.clone().json()
+                }).then((val)=>{
+                    status = val.elector[0].status;
+                    document.querySelector('body').innerHTML = `
+				<br><br>
+				<h1 style="color:#dfc15e;font-size: 50;text-align: center;margin: 20px 540px 2px 540px;"> Registration Status </h1>
+				<div style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);transition: 0.3s;text-align: center;margin: 25px 30% 25px 30%;background-color: #333333;">
+					<br><br><br><br><br>
+						<span style="font-size: 35;color: #dfc15e;margin: 2px 2px 2px 2px;font-family: Verdana,Geneva,sans-serif;
+						">Checking for ID: </span> <h1 style="color:#dfc15e">${idValue} </h1>
+				<br><br>
+				
+					<span style="font-size: 35;color: #dfc15e;margin: 2px 2px 2px 2px;font-family: Verdana,Geneva,sans-serif;
+                    ">Status: </span> <h1 style="color:#dfc15e">${status} </h1>
+                    <br><br>
+                    <span style="font-size: 35;color: #dfc15e;margin: 2px 2px 2px 2px;font-family: Verdana,Geneva,sans-serif;
+                    ">If you are having trouble, you can go to any<br> nearby kebele and ask for information. </span> <br>
+				`
+                });
+            });
+        </script>
+    </body>
+</html>
+

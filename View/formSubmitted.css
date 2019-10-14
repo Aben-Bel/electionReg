@@ -5,15 +5,10 @@
     margin: 20px 540px 2px 540px;
      }
     .one{ 
-      font-size: 35;
-    color: #000000;
-    margin: 2px 2px 2px 2px;
-      font-family: Verdana,Geneva,sans-serif;
+      font-size: 35;color: #000000;margin: 2px 2px 2px 2px;font-family: Verdana,Geneva,sans-serif;
      }
      .two{ 
-    color: black;
-    margin: 2px 2px 2px 2px;
-      font-family: Verdana,Geneva,sans-serif;
+    color: black;margin: 2px 2px 2px 2px;font-family: Verdana,Geneva,sans-serif;
      }
      .card {
       /* Add shadows to create the "card" effect */

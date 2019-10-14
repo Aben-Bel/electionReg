@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="/style/legibility.css"/>
+    </head>
+    <body>
+        <table id="lists">
+            <caption>Verify Document</caption>
+            <thead>
+              <tr>
+                <th scope="col">First Name</th>
+                <th scope="col">Father Name</th>
+                <th scope="col">ID Code</th>
+                <th scope="col">Birthdate</th>
+                <th scope="col">ACCEPT/DENY</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+
+              </tr>
+            </tbody>
+          </table>
+          <script>
+
+            const table = document.querySelector('#lists');
+            const tableRow = document.createElement('TR');
+            const tableCell = document.createElement('TD');
+            const removeButton = document.createElement('INPUT');
+            removeButton.value = 'DENY';
+            removeButton.type = 'Submit';
+            const acceptButton = document.createElement('INPUT');
+            acceptButton.value = 'ACCEPT';
+            acceptButton.type = 'Submit';
+
+
+            fetch(`/api/get/awaiting`).then((res) => {
+              // adding row to the favorite table
+              return res.clone().json() 
+            }).then((value)=>{
+              value.elector.forEach(
+                (data) => {
+                  console.log('data: ', data);
+                  const id = data._id;
+                  let tableCellClone = tableCell.cloneNode();
+                  const tableRowClone = tableRow.cloneNode();
+                  const removeButtonClone = removeButton.cloneNode();
+                  const acceptButtonClone = acceptButton.cloneNode();
+
+                  tableCellClone.textContent = data.firstName;
+                  tableRowClone.appendChild(tableCellClone);
+
+                  tableCellClone = tableCell.cloneNode();
+                  tableCellClone.textContent = data.fatherName;
+                  tableRowClone.appendChild(tableCellClone);
+
+                  tableCellClone = tableCell.cloneNode();
+                  tableCellClone.textContent = data.idNumber;
+                  tableRowClone.appendChild(tableCellClone);
+
+                  tableCellClone = tableCell.cloneNode();
+                  tableCellClone.textContent = data.dateOfBirth;
+                  tableRowClone.appendChild(tableCellClone);
+
+                  removeButtonClone.addEventListener('click', (event) => {
+                    updatedData = data;
+                    updatedData.status = 'UNREGISTERED';
+                    fetch(`/api/update/${id}`, {
+                      method: 'PUT',
+                      headers: {'content-type': 'application/json'},
+                      body: JSON.stringify(updatedData)
+                    }).then(res => res.text())
+                    .then(res => console.log(res))
+                    const row = event.srcElement.parentElement; 
+                    row.parentElement.removeChild(row)
+                  });
+                  
+                  tableRowClone.appendChild(removeButtonClone);
+                  acceptButtonClone.addEventListener('click', (event) => {
+                    updatedData = data;
+                    updatedData.status = 'REGISTERED';
+                    fetch(`/api/update/${id}`, {
+                      method: 'PUT',
+                      headers: {'content-type': 'application/json'},
+                      body: JSON.stringify(updatedData)
+                    }).then(res => res.text())
+                    .then(res => console.log(res))
+                    const row = event.srcElement.parentElement; 
+                    row.parentElement.removeChild(row); 
+                  });
+                  tableRowClone.appendChild(acceptButtonClone);
+
+                  table.appendChild(tableRowClone);
+                },
+              );
+            });
+              
+          </script>
+    </body>
+</html>
+

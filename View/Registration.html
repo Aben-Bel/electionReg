@@ -1,8 +1,20 @@
 <html>
 	<head>
 		<title>Registration Form</title>
-		<link rel="stylesheet" href="Registration.css">
+		<link rel="stylesheet" href="style/Registration.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style>
+				img{
+				  max-width:180px;
+				}
+				input[type=file]{
+				padding:10px;
+				background:#2d2d2d;}
+				.hide{
+					display:none;
+					height: 0px;
+				}
+		</style>
 	</head>  
 	<body>		
 		<div class="container">
@@ -12,7 +24,7 @@
 
 
 						<tr style="color:#dfc15e; font-size:30px;">
-							<td colspan=3><h2 align="center" class="padded3"> Voter<br>Registration Form</h2>
+							<td colspan=3><h2 align="center" class="padded3"> <span class="english">Voter</span><span class="amharic"></span><br><span class="english">Registration Form</span><span class="amharic"></span></h2>
 
 
 
@@ -21,9 +33,9 @@
 					</pre>
 				</table>
 				<table align="center" width="750" height="50">
-					<pre>
 						<tr>
-							<td class="info"><pre><b>  With this form:</b>
+							<td class="info">
+	<pre class="english"><b>  With this form:</b>
   You register to vote in elections in
   Ethiopia. You can also use this form to:
   - Update your voter registration record
@@ -36,8 +48,21 @@
 
 <b><i>  Read & fill out the form carefully.</i></b>
 					</pre>
+<pre class="amharic hide"><b>  With this form:</b>
+	You register to vote in elections in
+	Ethiopia. You can also use this form to:
+	- Update your voter registration record
+	if you have changed your name or address
+	
+	<b>  Deadline for submitting application:</b>
+	Voter registration and updating of voter
+	records is closed during the 3 months prior 
+	to election in Ethiopia
+	
+	<b><i>  Read & fill out the form carefully.</i></b>
+						</pre>
 					</td>
-					<td class="info"><pre><b>To register to vote in Ethiopia you must:</b>
+					<td class="info"><pre class="english"><b>To register to vote in Ethiopia you must:</b>
 - Be a citizen of Ethiopia
 - Live in  Ethiopia
 - Be at least 18 years of age on or
@@ -48,53 +73,75 @@
  Find anwers or tools on our website
  www.website.com or call
  +521978451254
-
+</pre>
+<pre class="amharic hide"><b>To register to vote in Ethiopia you must:</b>
+	- Be a citizen of Ethiopia
+	- Live in  Ethiopia
+	- Be at least 18 years of age on or
+	 before election day.
+	- Not have been convicted, you must have
+	 had your civil rights restored.
+	<b>For Questions</b>
+	 Find anwers or tools on our website
+	 www.website.com or call
+	 +521978451254
+	</pre>
 						</td>
-						</pre>
 						</tr>
 						<tr>
-						<td class="info" colspan="2"><pre>
-<b>   WARNING:It is a crime to procure a false registration or to furnish information.</b></pre></td></tr>
+						<td class="info" colspan="2">
+<pre class="english">
+<b>   WARNING:It is a crime to procure a false registration or to furnish information.</b></pre>
+<pre class="amharic hide">
+<b>   WARNING:It is a crime to procure a false registration or to furnish information.</b></pre>
+</td></tr>
 				</table>
 <br>
+<form>
 				<table align="center" width="750" height="500" class="one">
 					<tr>
-						<td colspan=3 class="padded4" id="header"> QUALIFICATIONS<br>
-							<font size="2px" color="white" face="arial" weight="none">If you answer No, you cannot register to vote</font>
+						<td colspan=3 class="padded4" id="header"> <span class="english">QUALIFICATIONS</span><span class="amharic hide"></span><br>
+							<font size="2px" color="white" face="arial" weight="none"><span class="amharic hide">If you answer No, you cannot register to vote</span></font>
 						</td>
 					</tr>
 					<tr>
-						<td class="padded5" id="text" colspan="2"><input type="radio" name="citzen" style="width:20px;height:20px;" />&nbspAre you a citzen of Ethiopia?
+						<td class="padded5" id="text" colspan="2">
+							<input required  type="checkbox" name="citzen" style="width:20px;height:20px;" id="citizen"/><span class="english">&nbspAre you a citzen of Ethiopia?</span><span class="amharic hide">&nbspAre you a citzen of Ethiopia?</span>
 						</td>
 					</tr>
 					<tr>
-						<td class="padded" id="text" colspan="2"><input type="radio" name="citzen" style="width:20px;height:20px;" />&nbspWill you be 18 or older on or before election day?
+						<td class="padded" id="text" colspan="2"><input required  type="checkbox" name="citzen" style="width:20px;height:20px;" id="age" />
+							<span class="english">&nbspWill you be 18 or older on or before election day?</span>
+							<span class="amharic hide">&nbspWill you be 18 or older on or before election day?</span>
 						</td>
 					</tr>
 					<tr>
-						<td colspan=3 class="padded4" id="header"> YOUR NAME<br><font size="2px" color="white" face="arial" weight="none">As seen in your ID or Legal document</font>
+						<td colspan=3 class="padded4" id="header"> <span class="english">YOUR NAME</span><span class="amharic hide">YOUR NAME</span><br><font size="2px" color="white" face="arial" weight="none">
+							<span class="english">As seen in your ID or Legal document</span>
+							<span class="amharic hide">As seen in your ID or Legal document</span>
+						</font>
 						</td>
 					</tr>
 					<tr>
-						<td id="text" class="padded5">FIRST NAME<br><input type="text" class="text" name="First_Name" maxlength="30" style="width:200px;height:30px;"/><br>(max 30)
+						<td id="text" class="padded5"><span class="english">FIRST NAME</span><span class="amharic hide">FIRST NAME</span><br><input required  type="text" class="text" name="First_Name" maxlength="30" style="width:200px;height:30px;" id="firstName"/><br><span class="english">(max 30)</span><span class="amharic hide">(max 30)</span>
 						</td>
-						<td id="text" class="padded6">FATHER'S NAME<br><input type="text" class="text" name="First_Name" maxlength="30" style="width:200px;height:30px;"/><br>(max 30)
+						<td id="text" class="padded6"><span class="english">FATHER'S NAME</span><span class="amharic hide">FATHER'S NAME</span><br><input required  type="text" class="text" name="First_Name" maxlength="30" style="width:200px;height:30px;" id="fatherName"/><br><span class="english">(max 30)</span><span class="amharic hide">(max 30)</span>
 						</td>
-						<td class="padded2" id="text">GRANDFATHER'S NAME<br><input type="text" class="text" name="First_Name" maxlength="30" style="width:200px;height:30px;"/><br>(max 30)
+						<td class="padded2" id="text"><span class="english">GRANDFATHER'S NAME</span><span class="amharic hide">GRANDFATHER'S NAME</span><br><input required  type="text" class="text" name="First_Name" maxlength="30" style="width:200px;height:30px;" id="grandFatherName"/><br><span class="english">(max 30)</span><span class="amharic hide">(max 30)</span>
 						</td>
 					</tr>
 					<tr>
-						<td colspan=3 class="padded4" id="header"> MORE INFORMATION</td></tr>
+						<td colspan=3 class="padded4" id="header"> <span class="english">MORE INFORMATION</span><span class="amharic hide">MORE INFORMATION</span></td></tr>
 					<tr>
-						<td class="padded5" id="text">GENDER</td>
+						<td class="padded5" id="text"><span class="english">GENDER</span><span class="amharic hide">GENDER</span></td>
 						<td colspan="2" id="text">
-							<input type="radio" name="Gender" value="Male" style="width:15px;height:15px;" />Male 
- 							<input type="radio" name="Gender" value="Female" style="width:15px;height:15px;" />Female
+							<input required  type="radio" name="Gender" value="Male" style="width:15px;height:15px;" /><span class="english">Male</span><span class="amharic hide">Male</span>
+ 							<input required  type="radio" name="Gender" value="Female" style="width:15px;height:15px;" /><span class="english">Female</span><span class="amharic hide">Female</span>
 						</td>
 					</tr>
  
 					<tr>
-						<td class="padded"  id="text">DATE OF BIRTH</td> 
+						<td class="padded"  id="text"><span class="english">DATE OF BIRTH</span><span class="amharic hide">DATE OF BIRTH</span></td> 
 						<td colspan="2">
 							<select name="Birthday_day" id="Birthday_Day" style="width:50px;height:30px;">
 								<option value="-1">Day:</option>
@@ -197,39 +244,39 @@
 						</td>
 					</tr>
  					<tr>
-						<td class="padded" id="text">MARITAL STATUS</td>
+						<td class="padded" id="text"><span class="english">MARITAL STATUS</span><span class="amharic hide">MARITAL STATUS</span></td>
 						<td colspan="2" id="text">
-							<input type="radio" name="Status" value="Single" style="width:15px;height:15px;" /> Single
-							<input type="radio" name="Status" value="Married" style="width:15px;height:15px;"/> Married
-							<input type="radio" name="Status" value="Divorced" style="width:15px;height:15px;"/>Divorced
+							<input required  type="radio" name="Status" value="Single" style="width:15px;height:15px;" /> <span class="english">Single</span><span class="amharic hide">Single</span>
+							<input required  type="radio" name="Status" value="Married" style="width:15px;height:15px;"/><span class="english">Married</span><span class="amharic hide">Married</span>
+							<input required  type="radio" name="Status" value="Divorced" style="width:15px;height:15px;"/><span class="english">Divorced</span><span class="amharic hide">Divorced</span>
 						</td>
 					</tr>
 					<tr>
-						<td colspan=3 class="padded4" id="header"> ADDRESS<br><font size="2px" color="white" face="arial" weight="none">Where you can be contacted</font>
+						<td colspan=3 class="padded4" id="header"><span class="english">ADDRESS</span><span class="amharic hide">ADDRESS</span> <br><font size="2px" color="white" face="arial" weight="none"><span class="english">Where you can be contacted</span><span class="amharic hide"></span></font>
 						</td>
 					</tr>
 					<tr>
-						<td class="padded4" id="text">MOBILE NUMBER</td>
+						<td class="padded4" id="text"><span class="english">MOBILE NUMBER</span><span class="amharic hide">MOBILE NUMBER</span></td>
 						<td colspan="2" class="padded3">
-							<input type="text" class="text" name="Mobile_Number" maxlength="10" style="width:150px;height:30px;"/>(10 digit)
+							<input required  type="text" class="text" name="Mobile_Number" id="number" maxlength="10" style="width:150px;height:30px;"/>(10 digit)
 						</td>
 					</tr>
 					<tr>
-						<td class="padded4" id="text">EMAIL ADDRESS</td>
+						<td class="padded4" id="text"><span class="english">EMAIL ADDRESS</span><span class="amharic hide">EMAIL ADDRESS</span></td>
 						<td colspan="2" class="padded4">
-							<input type="text" class="text" name="Mobile_Number" maxlength="10" style="width:200px;height:30px;"/>
+							<input required  type="text" class="text" id="email" name="Mobile_Number" maxlength="40" style="width:200px;height:30px;"/>
 						</td>
 					</tr>
 					<tr>
-						<td colspan=3 class="padded4" id="header"> ADDRESS<br><font size="2px" color="white" face="arial" weight="none">Where you live</font>
+						<td colspan=3 class="padded4" id="header"><span class="english">ADDRESS</span><span class="amharic hide">ADDRESS</span> <br><font size="2px" color="white" face="arial" weight="none"><span class="english">Where you live</span><span class="amharic hide">Where you live</span></font>
 						</td>
 					</tr>
 					<tr></tr>
 					<tr>
-						<td colspan=3 class="padded5" id="text">REGION</td>
+						<td colspan=3 class="padded5" id="text"><span class="english">REGION</span><span class="amharic hide">REGION</span></td>
 					</tr>
 					<tr>
-						<td class="padded" id="text">CITY</td>
+						<td class="padded" id="text"><span class="english">CITY</span><span class="amharic hide">CITY</span></td>
 						<td colspan="2" class="padded7">
 							<select name="City" id="City" style="width:150px;height:30px;">
 								<option value="-1">City:</option>
@@ -341,28 +388,218 @@
 						</td>
 					</tr>
  					<tr>
-						<td class="padded" id="text">SUBCITY</td>
-						<td colspan="2" class="padded7"><input type="text" class="text" name="Subcity" maxlength="30" style="width:200px;height:30px" />(max 30)</td>
+						<td class="padded" id="text"><span class="english">SUBCITY</span><span class="amharic hide">SUBCITY</span></td>
+						<td colspan="2" class="padded7"><input required  type="text" id="subCity" class="text" name="Subcity" maxlength="30" style="width:200px;height:30px" />(max 30)</td>
 					</tr>
 					<tr>
-						<td class="padded" id="text">WOREDA</td>
-						<td colspan="2" class="padded7"><input type="text" class="text" name="Woreda" maxlength="30" style="width:180px;height:30px;"/>(max 30)
+						<td class="padded" id="text"><span class="english">WEREDA</span><span class="amharic hide">WEREDA</span></td>
+						<td colspan="2" class="padded7"><input required  type="text" id="wereda" class="text" name="Woreda" maxlength="30" style="width:180px;height:30px;"/>(max 30)
 						</td>
 					</tr> 
+					<tr>
+						<td colspan=3 class="padded4" id="header"> <span class="english">Identification Number</span><span class="amharic hide">Identification Number</span><br><font size="2px" color="white" face="arial" weight="none">
+							<span class="english">Used to verify information</span>
+							<span class="amharic hide">Used to verify information</span>
+						</font>
+						</td>
+					</tr>
+					<tr>
+						<td class="padded" id="text"><span class="english">ID Code</span><span class="amharic hide">Id Code</span></td>
+						<td colspan="2" class="padded7"><input required  type="text" id="idNumber" class="text" name="idNumber" maxlength="30" style="width:180px;height:30px;"/><span class="english">(As found on the id)</span><span class="amharic hide">(As found on the id)</span>
+						</td>
+					</tr> 
+					<tr>
+							<td colspan=3 class="padded4" id="header"><span class="english">Biometerics FingerPrint</span><span class="amharic hide">Biometerics FingerPrint</span> <br><font size="2px" color="white" face="arial" weight="none"><span class="english">Upload a photo of your fingerprint</span><span class="amharic hide">Upload a photo of your fingerprint</span></font>
+							</td>
+						</tr>
+						<tr>
+							<td class="padded" id="text"><span class="english">Upload File: (use pen to color your finger)</span><span class="amharic hide">Upload File: (use pen to color your finger)</span> </td>
+							<td>    
+								<input type='file' onchange="readURL(this, 'blah');" />
+								<img id="blah" src="" alt="your image"/>
+							</td>
+						</tr> 
+						<tr>
+
+						</tr>
 				</table>
-				<table align="center">
+				<table align="center" id="buttons">
 					<tr>
 						<td colspan="3" align="center"><pre>
+<input required  type="button" id="submitForm" class="button" value="Submit" style="width:100px;height:30px;">      <input required  type="button" id="reset" class="button" style="width:100px;height:30px;"value="Reset">
 
-
-
-
-<input type="button" class="button" value="Submit" style="width:100px;height:30px;">      <input type="button" class="button" style="width:100px;height:30px;"value="Reset">
 						</pre></td>
 					</tr>
 				</table> 
 			</form>
  		</div>
 	</div>
+	<script>
+		/* REGISTRATION FORM */
+		window.post = function(url, data) {
+			return fetch(url, {method: "POST",headers: {
+				'Content-Type': 'application/json'
+			}, body: JSON.stringify(data)});
+		}
+		console.log(document.querySelector('.hide'))
+		let fingerPrint;
+		function toDataURL(src, callback, outputFormat) {
+			var img = new Image();
+			img.crossOrigin = 'Anonymous';
+			img.onload = function() {
+			  var canvas = document.createElement('CANVAS');
+			  var ctx = canvas.getContext('2d');
+			  var dataURL;
+			  canvas.height = this.naturalHeight;
+			  canvas.width = this.naturalWidth;
+			  ctx.drawImage(this, 0, 0);
+			  dataURL = canvas.toDataURL(outputFormat);
+			  callback(dataURL);
+			};
+			img.src = src;
+			if (img.complete || img.complete === undefined) {
+			  img.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
+			  img.src = src;
+			}
+		  }
+		
+		function readURL(input, id) {
+			if (input.files && input.files[0]) {
+				var reader = new FileReader();
+	 
+				reader.onload = function (e) {
+					document.querySelector(`#${id}`)
+						.setAttribute('src', e.target.result);
+					toDataURL(
+						e.target.result,
+						function(dataUrl) {
+							console.log('RESULT:', dataUrl);
+							fingerPrint = dataUrl;
+						}
+						)
+				};
+				reader.readAsDataURL(input.files[0]);
+			}
+		}
+
+		const submit = document.querySelector('#submitForm');
+		const citizen = document.querySelector('#citizen');
+		const age = document.querySelector('#age');
+		const firstName = document.querySelector('#firstName');
+		const fatherName = document.querySelector('#fatherName');
+		const grandFatherName = document.querySelector('#grandFatherName');
+		let gender = document.querySelector('input[name="Gender"]:checked');
+		const day = document.querySelector('#Birthday_Day');
+		const month = document.querySelector('#Birthday_Month');
+		const year = document.querySelector('#Birthday_Year');
+		let martialStatus = document.querySelector('input[name="Status"]:checked');
+		const mobileNumber = document.querySelector('#number');
+		const emailAddress = document.querySelector('#email');
+		const regionCity = document.querySelector('#City');
+		const subCity = document.querySelector('#subCity');
+		const wereda = document.querySelector('#wereda');
+		const idNumber = document.querySelector('#idNumber');
+
+		const reset = document.querySelector('#reset');
+		reset.addEventListener('click',()=>{
+			firstName.value = '';
+			fatherName.value = '';
+			grandFatherName.value = '';
+			gender = document.querySelector('input[name="Gender"]:checked');
+			if(gender){
+				gender.checked = false;
+			}
+			day.value = '';
+			month.value = '';
+			year.value = '';
+			martialStatus = document.querySelector('input[name="Status"]:checked');
+			if(martialStatus){
+				martialStatus.checked = false;
+			}
+			mobileNumber.value = '';
+			emailAddress.value = '';
+			regionCity.options[regionCity.selectedIndex].value = '';
+			subCity.value = '';
+			wereda.value = '';
+			idNumber.value = '';
+		});
+
+		submit.addEventListener('click',()=>{
+			try {
+				const citizenValue = citizen.value;
+				const ageValue = age.value;
+				if(citizenValue !== 'on' || ageValue !== 'on'){
+					alert('You have to be a citizen and above 18 to register');
+				}
+				const firstNameValue = firstName.value;
+				const fatherNameValue = fatherName.value;
+				const grandFatherNameValue = grandFatherName.value;
+				gender = document.querySelector('input[name="Gender"]:checked');
+				const genderValue = gender.value;
+				const dayValue = day.value;
+				const monthValue = month.value;
+				const yearValue = year.value;
+				martialStatus = document.querySelector('input[name="Status"]:checked');
+				const martialStatusValue = martialStatus.value;
+				const mobileNumberValue = mobileNumber.value;
+				const emailAddressValue = emailAddress.value;
+				const region = regionCity.options[regionCity.selectedIndex].value;
+				const subCityValue = subCity.value;
+				const weredaValue = wereda.value;
+				const idNumberValue = idNumber.value;
+
+				const data = { 
+					firstName:firstNameValue,
+					fatherName:grandFatherNameValue,
+					grandFatherName:grandFatherNameValue,
+					gender:genderValue,
+					dateOfBirth: `${dayValue}, ${monthValue}, ${yearValue}`,
+					martialStatus: martialStatusValue,
+					mobileNumber:mobileNumberValue,
+					emailAddress:emailAddressValue,
+					regionCity: region,
+					subCity:subCityValue,
+					wereda:weredaValue,
+					idNumber:idNumberValue,
+					fingerPrint
+				};
+
+
+			console.log('data: ', data);
+			post("/api/create", data).then((res)=>{
+				return res.clone().text()
+			}).then((val) => {
+				console.log('val: ', val)
+				document.querySelector('body').innerHTML = `
+				<br><br>
+				<span style="color:#dfc15e;font-size: 50;text-align: center;margin: 20px 540px 2px 540px;"> Successfully Submitted </span>
+				<div style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);transition: 0.3s;text-align: center;margin: 25px 30% 25px 30%;background-color: #333333;">
+					<br><br><br><br><br>
+						<span style="font-size: 35;color: #dfc15e;margin: 2px 2px 2px 2px;font-family: Verdana,Geneva,sans-serif;
+						">ID: </span> <span style="color:#dfc15e">${val} </span>
+				<br><br>
+				
+					<span style="font-size: 35;color: #dfc15e;margin: 2px 2px 2px 2px;font-family: Verdana,Geneva,sans-serif;
+					">Status: </span> <span style="color:#dfc15e">AWAITING </span>
+				<br><br>
+					<span style="font-size: 35;color: #dfc15e;margin: 2px 2px 2px 2px;font-family: Verdana,Geneva,sans-serif;
+					">Poll: </span> <span style="color:#dfc15e">${region} at wereda ${weredaValue} </span>
+				<br> <br> <br> <br><br><br><br><br>
+					<span style="color: #dfc15e;margin: 2px 2px 2px 2px;font-family: Verdana,Geneva,sans-serif;
+					">If you are having trouble, you can go to any<br> nearby kebele and ask for information. </span> <br>
+				</div>
+				`
+			});
+
+				
+			} catch {
+				alert('Please Fill the form correctly');
+				reset.click();
+			}
+			
+
+			
+		});
+	</script>
 </body>
 </html>
