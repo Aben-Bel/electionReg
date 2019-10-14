@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="hack1.css">
+	<script type="text/javascript">
+		
+$("#email").focus(function(){
+    $("#emailLabel").addClass("show");
+    $(this).val('')
+}).blur(function(){
+    $("#emailLabel").removeClass("show");
+});
+
+$("#password").focus(function(){
+    $("#passwordLabel").addClass("show");
+    $(this).val('')
+}).blur(function(){
+    $("#passwordLabel").removeClass("show");
+});
+
+	</script>
+</head>
+
+<body >
+	<section class="container">
+  <div class="span-6">
+    <div class="login">
+      <h1>Status confirmation</h1>
+      <div class="login-content">
+  
+        <label id="passwordLabel">Please enter your ID number</label>
+        <input type="password" id="password" placeholder="ID number" / ><br>
+          <a href="#"></a>&#x2022<a href="#"> Forgot ID number</a><br>
+        
+        <input type="submit" value="Submit">
+        
+      </div>
+    </div>
+  </div>
+  <div class="span-6">
+    <div class="message">
+      <span class="first">register</span>
+      <span class="second">to</span>
+      <span class="third">vote</span>
+  </div>
+</section>
+  
+
+</body>
+</html>
+
