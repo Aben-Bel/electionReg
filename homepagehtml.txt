@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>story</title>
+
+<link rel="stylesheet" type="text/css" href="firstpage.css">
+
+</head>
+<body>
+	<div class='whole'>
+<div class="topnav" id="myTopnav">
+  <a href="#home" class="active">Home</a>
+  <a href="#news">Status</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+</div>
+<section class="container">
+  <div class="span-6">
+    <div class="login">
+      <h1>Election Verification</h1>
+      <div class="login-content">
+      	 <input type="submit" value="Vote">
+        
+        <input id="reg"  type="submit" value="Check status">
+        
+         
+        
+       
+        
+      </div>
+    </div>
+  </div>
+  <div class="span-6">
+    <div class="message">
+      <span class="first">Register</span>
+      <span class="second">to</span>
+      <span class="third">Vote</span>
+  </div>
+</section>
+</body>
+</html>
